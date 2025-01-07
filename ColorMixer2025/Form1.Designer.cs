@@ -37,6 +37,10 @@
             trackBarRed = new TrackBar();
             trackBarGreen = new TrackBar();
             trackBarBlue = new TrackBar();
+            buttonRandomRed = new Button();
+            buttonRandomGreen = new Button();
+            buttonRandomBlue = new Button();
+            buttonRandomMix = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownRed).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxRed).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGreen).BeginInit();
@@ -104,7 +108,7 @@
             // 
             // trackBarRed
             // 
-            trackBarRed.Location = new Point(41, 290);
+            trackBarRed.Location = new Point(41, 353);
             trackBarRed.Maximum = 255;
             trackBarRed.Name = "trackBarRed";
             trackBarRed.Size = new Size(156, 45);
@@ -114,7 +118,7 @@
             // 
             // trackBarGreen
             // 
-            trackBarGreen.Location = new Point(321, 290);
+            trackBarGreen.Location = new Point(321, 353);
             trackBarGreen.Maximum = 255;
             trackBarGreen.Name = "trackBarGreen";
             trackBarGreen.Size = new Size(156, 45);
@@ -124,7 +128,7 @@
             // 
             // trackBarBlue
             // 
-            trackBarBlue.Location = new Point(595, 290);
+            trackBarBlue.Location = new Point(595, 353);
             trackBarBlue.Maximum = 255;
             trackBarBlue.Name = "trackBarBlue";
             trackBarBlue.Size = new Size(156, 45);
@@ -132,11 +136,63 @@
             trackBarBlue.TickStyle = TickStyle.None;
             trackBarBlue.Scroll += trackBarBlue_Scroll;
             // 
+            // buttonRandomRed
+            // 
+            buttonRandomRed.BackColor = Color.Red;
+            buttonRandomRed.ForeColor = Color.White;
+            buttonRandomRed.Location = new Point(41, 288);
+            buttonRandomRed.Name = "buttonRandomRed";
+            buttonRandomRed.Size = new Size(156, 47);
+            buttonRandomRed.TabIndex = 9;
+            buttonRandomRed.Text = "Random Red";
+            buttonRandomRed.UseVisualStyleBackColor = false;
+            buttonRandomRed.Click += buttonRandomRed_Click;
+            // 
+            // buttonRandomGreen
+            // 
+            buttonRandomGreen.BackColor = Color.FromArgb(0, 192, 0);
+            buttonRandomGreen.ForeColor = Color.White;
+            buttonRandomGreen.Location = new Point(321, 288);
+            buttonRandomGreen.Name = "buttonRandomGreen";
+            buttonRandomGreen.Size = new Size(156, 47);
+            buttonRandomGreen.TabIndex = 10;
+            buttonRandomGreen.Text = "Random Green";
+            buttonRandomGreen.UseVisualStyleBackColor = false;
+            buttonRandomGreen.Click += buttonRandomGreen_Click;
+            // 
+            // buttonRandomBlue
+            // 
+            buttonRandomBlue.BackColor = Color.Blue;
+            buttonRandomBlue.ForeColor = Color.White;
+            buttonRandomBlue.Location = new Point(595, 288);
+            buttonRandomBlue.Name = "buttonRandomBlue";
+            buttonRandomBlue.Size = new Size(156, 47);
+            buttonRandomBlue.TabIndex = 11;
+            buttonRandomBlue.Text = "Random Blue";
+            buttonRandomBlue.UseVisualStyleBackColor = false;
+            buttonRandomBlue.Click += buttonRandomBlue_Click;
+            // 
+            // buttonRandomMix
+            // 
+            buttonRandomMix.BackColor = Color.Black;
+            buttonRandomMix.ForeColor = Color.White;
+            buttonRandomMix.Location = new Point(41, 404);
+            buttonRandomMix.Name = "buttonRandomMix";
+            buttonRandomMix.Size = new Size(710, 47);
+            buttonRandomMix.TabIndex = 12;
+            buttonRandomMix.Text = "Random Mix";
+            buttonRandomMix.UseVisualStyleBackColor = false;
+            buttonRandomMix.Click += buttonRandomMix_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(796, 426);
+            ClientSize = new Size(796, 499);
+            Controls.Add(buttonRandomMix);
+            Controls.Add(buttonRandomBlue);
+            Controls.Add(buttonRandomGreen);
+            Controls.Add(buttonRandomRed);
             Controls.Add(trackBarBlue);
             Controls.Add(trackBarGreen);
             Controls.Add(trackBarRed);
@@ -172,5 +228,9 @@
         private TrackBar trackBarRed;
         private TrackBar trackBarGreen;
         private TrackBar trackBarBlue;
+        private Button buttonRandomRed;
+        private Button buttonRandomGreen;
+        private Button buttonRandomBlue;
+        private Button buttonRandomMix;
     }
 }

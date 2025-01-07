@@ -6,6 +6,8 @@ namespace ColorMixer2025
         private int greenValue = 0;
         private int blueValue = 0;
 
+        private Random rand = new Random();
+
         public Form1()
         {
             InitializeComponent();
@@ -45,6 +47,28 @@ namespace ColorMixer2025
         private void trackBarBlue_Scroll(object sender, EventArgs e)
         {
             numericUpDownBlue.Value = trackBarBlue.Value;
+        }
+
+        private void buttonRandomRed_Click(object sender, EventArgs e)
+        {
+            numericUpDownRed.Value = rand.Next(256);
+        }
+
+        private void buttonRandomGreen_Click(object sender, EventArgs e)
+        {
+            numericUpDownGreen.Value = rand.Next(256);
+        }
+
+        private void buttonRandomBlue_Click(object sender, EventArgs e)
+        {
+            numericUpDownBlue.Value = rand.Next(256);
+        }
+
+        private void buttonRandomMix_Click(object sender, EventArgs e)
+        {
+            numericUpDownRed.Value = rand.Next(256);
+            numericUpDownGreen.Value = rand.Next(256);
+            numericUpDownBlue.Value = rand.Next(256);
         }
     }
 }
